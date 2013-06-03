@@ -124,9 +124,8 @@ public class Settings extends PreferenceActivity
             R.id.about_settings,
             R.id.accessibility_settings,
             R.id.interface_section,
-            R.id.launcher_settings,
             R.id.lock_screen_settings,
-            R.id.system_settings
+            R.id.romsettings_section
     };
 
     private SharedPreferences mDevelopmentPreferences;
@@ -873,5 +872,5 @@ public class Settings extends PreferenceActivity
     public static class ProfilesSettingsActivity extends Settings { /* empty */ }
     public static class QuietHoursSettingsActivity extends Settings { /* empty */ }
     public static class DreamSettingsActivity extends Settings { /* empty */ }
-    public static class SystemSettingsActivity extends Settings { /* empty */ }
+    public static class ROMSettingsActivity extends Settings { /* empty */ }
 }

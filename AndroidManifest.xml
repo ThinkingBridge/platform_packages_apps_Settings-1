@@ -1522,13 +1522,10 @@
             android:launchMode="singleTop"
             android:theme="@style/CryptKeeperBlankTheme"
         />
-
-        <!-- CyanogenMod activities Start -->
-        <activity android:name=".cyanogenmod.PowerWidget" />
-
-        <activity android:name=".cyanogenmod.SystemSettings" />
-        <activity android:name="Settings$SystemSettingsActivity"
-                android:label="@string/system_settings_title"
+        
+        <!-- ThinkingBridge Activity -->
+        <activity android:name="Settings$ROMSettingsActivity"
+                android:label="@string/rom_settings_title"
                 android:taskAffinity=""
                 android:excludeFromRecents="true">
             <intent-filter>
@@ -1536,12 +1533,43 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.cyanogenmod.SystemSettings" />
+                android:value="com.android.settings.thinkingbridge.ROMSettings" />
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
-                android:resource="@id/system_settings" />
+                android:resource="@id/rom_settings" />
         </activity>
 
-        <activity android:name=".cyanogenmod.PerformanceSettings" />
+        <activity android:name=".thinkingbridge.ROMSettings"
+            android:label="ROMSettings" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- ThinkingBridge Activity -->
+        <activity android:name=".thinkingbridge.PowerWidget" />
+
+        <activity android:name="Settings$ROMSettingsActivity"
+                android:label="@string/rom_settings_title"
+                android:taskAffinity=""
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.thinkingbridge.ROMSettings" />
+            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                android:resource="@id/rom_settings" />
+        </activity>
+
+        <activity android:name=".thinkingbridge.ROMSettings"
+            android:label="ROMSettings" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <activity android:name="Settings$QuietHoursSettingsActivity"
                 android:label="@string/quiet_hours_title"
@@ -1601,15 +1629,13 @@
 
         <activity android:name=".cyanogenmod.LockscreenTargets" />
 
-        <activity android:name=".cyanogenmod.ChangeLog" />
-
         <activity android:name=".cyanogenmod.LockscreenInterface" />
 
         <activity android:name=".cyanogenmod.LockscreenButtons" />
 
-        <activity android:name=".cyanogenmod.PowerMenu" />
+        <activity android:name=".thinkingbridge.PowerMenu" />
 
-        <activity android:name=".cyanogenmod.QuickSettings" />
+        <activity android:name=".thinkingbridge.QuickSettings" />
 
         <activity android:name=".profiles.NFCProfile"
                 android:theme="@android:style/Theme.NoDisplay">
