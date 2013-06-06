@@ -1,6 +1,5 @@
 /*
  * Copyright (C) 2008 The Android Open Source Project
- * Portions Copyright (C) 2013 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -148,8 +147,6 @@ public class DevelopmentSettings extends PreferenceFragment
 
     private static final String DEVELOPMENT_TOOLS = "development_tools";
 
-    private static final String ADVANCED_REBOOT_KEY = "advanced_reboot";
-
     private static final int RESULT_DEBUG_APP = 1000;
 
     private IWindowManager mWindowManager;
@@ -206,8 +203,6 @@ public class DevelopmentSettings extends PreferenceFragment
     private Object mSelectedRootValue;
     private PreferenceScreen mDevelopmentTools;
 
-    private CheckBoxPreference mAdvancedReboot;
-
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
     private final ArrayList<CheckBoxPreference> mResetCbPrefs
             = new ArrayList<CheckBoxPreference>();
@@ -243,12 +238,10 @@ public class DevelopmentSettings extends PreferenceFragment
         mAllowMockLocation = findAndInitCheckboxPref(ALLOW_MOCK_LOCATION);
         mPassword = (PreferenceScreen) findPreference(LOCAL_BACKUP_PASSWORD);
         mAllPrefs.add(mPassword);
-        mAdvancedReboot = findAndInitCheckboxPref(ADVANCED_REBOOT_KEY);
 
         if (!android.os.Process.myUserHandle().equals(UserHandle.OWNER)) {
             disableForUser(mEnableAdb);
             disableForUser(mPassword);
-            disableForUser(mAdvancedReboot);
         }
 
         mDebugAppPref = findPreference(DEBUG_APP_KEY);
@@ -496,19 +489,6 @@ public class DevelopmentSettings extends PreferenceFragment
         updateVerifyAppsOverUsbOptions();
         updateBugreportOptions();
         updateRootAccessOptions();
-        updateAdvancedRebootOptions();
-    }
-
-    private void writeAdvancedRebootOptions() {
-        Settings.Secure.putInt(getActivity().getContentResolver(),
-                Settings.Secure.ADVANCED_REBOOT,
-                mAdvancedReboot.isChecked() ? 1 : 0);
-    }
-
-    private void updateAdvancedRebootOptions() {
-        mAdvancedReboot.setChecked(Settings.Secure.getInt(getActivity().getContentResolver(),
-                Settings.Secure.ADVANCED_REBOOT, 0) != 0);
-    }
 
     private void updateAdbOverNetwork() {
         int port = Settings.Secure.getInt(getActivity().getContentResolver(),
@@ -1149,11 +1129,6 @@ public class DevelopmentSettings extends PreferenceFragment
                             Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
                     mLastEnabledState = isChecked;
                     setPrefsEnabledState(mLastEnabledState);
-
-                    // Hide development settings from the Settings menu (Android 4.2 behaviour)
-                    getActivity().getSharedPreferences(PREF_FILE, Context.MODE_PRIVATE).edit()
-                        .putBoolean(PREF_SHOW, false)
-                        .apply();
                 }
             }
         }
@@ -1279,8 +1254,6 @@ public class DevelopmentSettings extends PreferenceFragment
             writeDebugLayoutOptions();
         } else if (preference == mKillAppLongpressBack) {
             writeKillAppLongpressBackOptions();
-        } else if (preference == mAdvancedReboot) {
-            writeAdvancedRebootOptions();
         }
 
         return false;
@@ -1378,13 +1351,6 @@ public class DevelopmentSettings extends PreferenceFragment
                         Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
                 mLastEnabledState = true;
                 setPrefsEnabledState(mLastEnabledState);
-
-                // Make sure the development settings is visible in the main Settings menu
-                // This is needed since we may have just turned off dev settings and want to
-                // turn it on again
-                getActivity().getSharedPreferences(PREF_FILE, Context.MODE_PRIVATE).edit()
-                    .putBoolean(PREF_SHOW, true)
-                    .apply();
             }
         } else if (dialog == mRootDialog) {
             if (which == DialogInterface.BUTTON_POSITIVE) {
