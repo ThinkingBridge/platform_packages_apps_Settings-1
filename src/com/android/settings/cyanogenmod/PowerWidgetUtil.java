@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.thinkingbridge;
+package com.android.settings.cyanogenmod;
 
 import com.android.internal.telephony.PhoneConstants;
 import com.android.settings.R;

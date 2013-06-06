@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.thinkingbridge;
+package com.android.settings.cyanogenmod;
 
 import java.util.ArrayList;
 import java.util.Arrays;

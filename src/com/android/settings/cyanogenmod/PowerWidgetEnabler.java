@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.thinkingbridge;
+package com.android.settings.cyanogenmod;
 
 import android.provider.Settings;
 import android.content.Context;
