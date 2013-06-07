@@ -5235,6 +5235,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pie_stick_title">Prevent rotation</string>
     <string name="pie_stick_summary">If checked PIE will stay in place no matter which orientation</string>
     <string name="pie_color_title">Color Settings</string>
+    <string name="pie_button_color">Button color</string>
     <string name="pie_color_style_title">Enable custom colors</string>
     <string name="pie_background_title">Background color</string>
     <string name="pie_select_title">Selection color</string>
