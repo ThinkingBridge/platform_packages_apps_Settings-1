@@ -1571,6 +1571,25 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".thinkingbridge.Pie"
+            android:label="@string/title_pie" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SHORTCUT" />
+              </intent-filter>
+        </activity>
+        <activity
+            android:name=".thinkingbridge.PieColor"
+            android:label="ColorPIE" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SHORTCUT" />
+              </intent-filter>
+        </activity>
+
         <activity android:name="Settings$QuietHoursSettingsActivity"
                 android:label="@string/quiet_hours_title"
                 android:taskAffinity=""
