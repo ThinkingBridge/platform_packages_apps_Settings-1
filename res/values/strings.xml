@@ -4472,11 +4472,6 @@
 
     <!-- Hostname setting -->
     <string name="device_hostname">Device hostname</string>
-    
-    <!-- ThinkingBridge ROMSettings -->
-    <string name="user_interface">USER INTERFACE</string>
-    <string name="rom_settings_title">ROM Settings</string>
-    <string name="rom_settings_summary">ya! feel so good!</string>
 
     <!-- Themes settings  -->
     <string name="themes_settings_title">Themes</string>
@@ -5184,10 +5179,19 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Sound settings, power notifications label for ringtone == none -->
     <string name="power_notifications_ringtone_silent">Silent</string>
 
+    <!-- Main setting -->
+    <string name="used_setting">Used</string>
+    <string name="personal_setting">Personal</string>
+    <string name="system_setting">System</string>
+
+    <!-- SystemSettings -->
+    <string name="user_interface">UserInterface</string>
+    <string name="navbar_headers">Navigation Bar</string>
+
     <!-- PIE Controls -->
     <string name="pie_settings">PIE Controls</string>
-    <string name="pie">PIE™</string>
-    <string name="title_pie">PIE™</string>
+    <string name="pie">PIE Controls</string>
+    <string name="title_pie">PIE Controls</string>
     <string name="pie_controls_title">Controls</string>
     <string name="pie_controls_summary">@null</string>
     <string name="enable_pie_title">Enable PIE</string>
@@ -5245,10 +5249,5 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pie_chevron_left_title">Left chevron color</string>
     <string name="pie_chevron_right_title">Right chevron color</string>
     <string name="pie_juice_title">Battery juice color</string>
-
-    <!-- Main setting -->
-    <string name="used_setting">Used</string>
-    <string name="personal_setting">Personal</string>
-    <string name="system_setting">System</string>
 
 </resources>
