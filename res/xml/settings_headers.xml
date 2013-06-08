@@ -180,17 +180,6 @@
         <intent
             android:action="android.settings.ADD_ACCOUNT_SETTINGS"/>
     </header>
-    
-    <!-- ROMSettings -->
-    <header
-        android:id="@+id/romsettings_section"
-        android:title="@string/user_interface" />
-    
-    <header
-        android:id="@+id/rom_settings"
-        android:title="@string/rom_settings_title"
-        android:icon="@drawable/ic_settings_romsettings"
-        android:fragment="com.android.settings.thinkingbridge.ROMSettings" />
 
     <!-- Lock screen -->
     <header

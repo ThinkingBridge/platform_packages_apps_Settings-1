@@ -124,8 +124,7 @@ public class Settings extends PreferenceActivity
             R.id.date_time_settings,
             R.id.about_settings,
             R.id.accessibility_settings,
-            R.id.lock_screen_settings,
-            R.id.romsettings_section
+            R.id.lock_screen_settings
     };
 
     private SharedPreferences mDevelopmentPreferences;

@@ -1562,54 +1562,9 @@
             android:launchMode="singleTop"
             android:theme="@style/CryptKeeperBlankTheme"
         />
-        
-        <!-- ThinkingBridge Activity -->
-        <activity android:name="Settings$ROMSettingsActivity"
-                android:label="@string/rom_settings_title"
-                android:taskAffinity=""
-                android:excludeFromRecents="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.thinkingbridge.ROMSettings" />
-            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
-                android:resource="@id/rom_settings" />
-        </activity>
-
-        <activity android:name=".thinkingbridge.ROMSettings"
-            android:label="ROMSettings" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
         <!-- ThinkingBridge Activity -->
         <activity android:name=".thinkingbridge.PowerWidget" />
-
-        <activity android:name="Settings$ROMSettingsActivity"
-                android:label="@string/rom_settings_title"
-                android:taskAffinity=""
-                android:excludeFromRecents="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.thinkingbridge.ROMSettings" />
-            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
-                android:resource="@id/rom_settings" />
-        </activity>
-
-        <activity android:name=".thinkingbridge.ROMSettings"
-            android:label="ROMSettings" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
         <activity
             android:name=".thinkingbridge.Pie"
