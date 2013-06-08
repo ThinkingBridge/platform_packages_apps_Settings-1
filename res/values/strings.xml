@@ -5245,4 +5245,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pie_chevron_left_title">Left chevron color</string>
     <string name="pie_chevron_right_title">Right chevron color</string>
     <string name="pie_juice_title">Battery juice color</string>
+
+    <!-- Main setting -->
+    <string name="used_setting">Used</string>
+    <string name="personal_setting">Personal</string>
+    <string name="system_setting">System</string>
+
 </resources>
