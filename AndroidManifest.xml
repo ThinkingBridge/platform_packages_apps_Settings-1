@@ -1651,6 +1651,8 @@
 
         <activity android:name=".thinkingbridge.QuickSettings" />
 
+        <activity android:name=".thinkingbridge.StatusBar" />
+
         <activity android:name=".profiles.NFCProfile"
                 android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
